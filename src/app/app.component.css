@@ -1,0 +1,57 @@
+.app-block {
+    width: 1100px;
+    height: 460px;
+    
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.grid-cbxcol-control-panel
+{
+    float: left;
+    margin: 0 0 0 32px;
+    width: calc(30% - 40px);
+    height: 100%;
+}
+
+.grid-cbxcol-normal
+{
+    float: left;
+    height: 100%;
+    width: 70%;
+}
+.grid-cbxcol-cell-label
+{
+    display: inline-block;
+    margin-top: 3px;
+}
+
+/* CheckBox Cell */
+.grid-cbxcol-checkbox
+{
+    background: url(https://www.lidorsystems.com/images/integralui-web/resources/checkbox/checkbox-unchecked-1.png) no-repeat 0 0;
+    display: inline-block;
+    padding: 0;
+    margin: 4px 7px 0 7px;
+    width: 16px;
+    height: 16px;
+}
+.grid-cbxcol-checkbox-true
+{
+    background: url(https://www.lidorsystems.com/images/integralui-web/resources/checkbox/checkbox-checked-1.png) no-repeat 0 0;
+}
+
+.grid-cbxcol-checkbox-custom
+{
+    background: url(https://www.lidorsystems.com/images/integralui-web/resources/checkbox/checkbox-unchecked-5.png) no-repeat 0 0;
+    width: 38px;
+    height: 14px;
+}
+.grid-cbxcol-checkbox-custom-true
+{
+    background: url(https://www.lidorsystems.com/images/integralui-web/resources/checkbox/checkbox-checked-5.png) no-repeat 0 0;
+}

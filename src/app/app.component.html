@@ -1,0 +1,28 @@
+<div class="app-block" #application>
+  <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [showFooter]="false" [rowHeight]="22" #grid>
+      <ng-template let-column [iuiTemplate]="{ type: 'header' }">
+          <span [ngSwitch]="column.id">
+              <span *ngSwitchCase="1">
+                  <span class="grid-cbxcol-checkbox" [ngClass]="{ 'grid-cbxcol-checkbox-true': column.value, 'grid-cbxcol-checkbox-custom': isCustomCheckBoxActive, 'grid-cbxcol-checkbox-custom-true': column.value && isCustomCheckBoxActive }" (mousedown)="columnCheckClicked(column)"></span>
+              </span>
+              <span *ngSwitchDefault>
+                  {{column.headerText}}
+              </span>
+          </span>
+      </ng-template>
+      <ng-template let-cell [iuiTemplate]="{ type: 'cell' }">
+          <span [ngSwitch]="cell.cid">
+              <span *ngSwitchCase="1">
+                  <span class="grid-cbxcol-checkbox" [ngClass]="{ 'grid-cbxcol-checkbox-true': cell.value, 'grid-cbxcol-checkbox-custom': isCustomCheckBoxActive, 'grid-cbxcol-checkbox-custom-true': cell.value && isCustomCheckBoxActive }" (mousedown)="checkBoxClicked(cell)"></span>
+              </span>
+              <span *ngSwitchCase="5">
+                  <span class="grid-cbxcol-cell-label">{{cell.value}}</span>
+              </span>
+              <span *ngSwitchDefault>
+                  <span class="grid-cbxcol-cell-label">{{cell.text}}</span>
+              </span>
+          </span>
+      </ng-template>
+  </iui-grid>
+  <label><input type="checkbox" [(ngModel)]="isCustomCheckBoxActive" (ngModelChange)="onCheckChange($event)"/>Custom CheckBoxes</label>
+</div>
